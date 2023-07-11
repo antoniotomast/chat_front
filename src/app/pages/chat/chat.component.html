@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row fila_abajo" #divMensajes>
+        <ul class="col-12 col-md-12">
+            <div class="row">
+                <li *ngFor="let msj of mensajes" [ngClass]="{ propio: (msj.socket_id === socket.id) }">
+                    <strong class="usuario col-12 col-md-4">{{msj.usuario}}</strong>
+                    <p class="mensaje col-12 col-md-8">{{msj.mensaje}}</p>
+                </li>
+            </div>
+        </ul>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-3">
+            <label for="">Usuario</label>
+            <input type="text" [(ngModel)]="data.usuario">
+        </div>
+        <div class="col-12 col-md-3">
+            <label for="">Mensaje</label>
+            <input type="text" [(ngModel)]="data.mensaje">
+        </div>
+        <div>
+            <label for="">Usuarios conectados</label>
+            <input type="text" value={{numClientes}}>
+        </div>
+        <div>
+            <i>{{audioOn ? '🔊' : '🔈'}}</i>
+            <input type="checkbox" [(ngModel)]="audioOn">
+        </div>
+        <button (click)="onClick()" class="boton btn btn-info col-12 col-md-3">Enviar</button>
+    </div>
+</div>

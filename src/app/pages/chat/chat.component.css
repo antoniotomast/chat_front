@@ -1,0 +1,33 @@
+.container {
+    position: absolute;
+}
+
+.usuario {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
+    list-style: none;
+
+}
+
+.mensaje {
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid violet;
+    height: 100px;
+    border-radius: 3px;
+    overflow-y: scroll;
+}
+
+.boton {
+    margin: 10px;
+}
+
+.posicion_abajo {
+    position: relative;
+}
+
+li.propio {
+    color: green;
+    align-self: flex-end;
+}
